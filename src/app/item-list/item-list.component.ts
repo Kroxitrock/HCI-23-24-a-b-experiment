@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Item } from '../interfaces/item';
 import { ItemCardComponent } from '../item-card/item-card.component';
 import { CommonModule } from '@angular/common';
+import { ItemService } from '../services/item.service';
 
 @Component({
   selector: 'app-item-list',
@@ -13,15 +14,13 @@ import { CommonModule } from '@angular/common';
 export class ItemListComponent {
   items: Array<Item> = [];
 
+  constructor(private itemService: ItemService) {}
+
   ngOnInit(): void {
-    const arr = [];
-    for (let i = 0; i < 10; i++) {
-      arr.push({
-        name: 'test',
-        imageURL: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-        isBig: Math.random() < 0.5,
-      });
-    }
-    this.items = arr;
+    this.itemService.getItems().subscribe((jsonItems) => {
+      const isBig = Math.random() < 0.5;
+      jsonItems.forEach((item: Item) => (item.isBig = isBig));
+      this.items = jsonItems;
+    });
   }
 }
