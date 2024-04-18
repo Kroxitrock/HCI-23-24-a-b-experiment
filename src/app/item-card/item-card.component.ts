@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { Item } from '../interfaces/item';
 
 @Component({
   selector: 'app-item-card',
@@ -8,4 +9,6 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './item-card.component.html',
   styleUrl: './item-card.component.scss',
 })
-export class ItemCardComponent {}
+export class ItemCardComponent {
+  @Input() item!: Item;
+}

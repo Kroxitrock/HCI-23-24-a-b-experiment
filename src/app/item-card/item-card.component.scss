@@ -1,9 +1,13 @@
-.item-card {
-  max-width: 15px;
-  border: 1px;
+.big-card {
+  max-width: 400px;
+  width: fit-content;
 }
 
-.example-card {
-  max-width: 400px;
-  margin-bottom: 8px;
+.small-card {
+  max-width: 200px;
+  width: fit-content;
+}
+
+mat-card {
+  margin: 10px;
 }
