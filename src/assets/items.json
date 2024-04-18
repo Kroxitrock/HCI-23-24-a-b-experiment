@@ -4,19 +4,199 @@
     "imageUrl": "https://material.angular.io/assets/img/examples/shiba2.jpg"
   },
   {
-    "name": "Dog",
-    "imageUrl": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    "name": "Cat",
+    "imageUrl": "https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
   },
   {
-    "name": "Dog",
-    "imageUrl": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    "name": "Laptop",
+    "imageUrl": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/PDP-Highlight-Consumer-Laptop-Go-3-Platinum-001:VP1-539x440"
   },
   {
-    "name": "Dog",
-    "imageUrl": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    "name": "Phone",
+    "imageUrl": "https://motorolaus.vtexassets.com/arquivos/ids/162813/thinkphone-pdp-ecom-render-5-carbon-black-qq6n0fna.png?v=638084623680430000"
   },
   {
-    "name": "Dog",
-    "imageUrl": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    "name": "Shoes",
+    "imageUrl": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ca79d356-421f-4a96-a823-b695f15c7a34/in-season-tr-13-workout-shoes-BDTlPf.png"
+  },
+  {
+    "name": "Cards",
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_bbd1e58d-a30b-42a1-9e7f-962e85b598f9?wid=488&hei=488&fmt=pjpeg"
+  },
+  {
+    "name": "Watch",
+    "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MT3D3ref_VW_34FR+watch-case-44-aluminum-midnight-nc-se_VW_34FR+watch-face-44-aluminum-midnight-se_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=1694507496485"
+  },
+  {
+    "name": "Book",
+    "imageUrl": "https://cdn.kobo.com/book-images/06de2c92-f80f-4715-b2ee-4808f6c4df16/1200/1200/False/kafka-on-the-shore-3.jpg"
+  },
+  {
+    "name": "Headphones",
+    "imageUrl": "https://www.laserco.com.au/image/cache/data/product_images/HPS-FDANB-002/HPS-FDANB-002_Bluetooth%20Headphone%20with%20Active%20Noise%20Cancelling%20Black_front-4500x3677.jpg"
+  },
+  {
+    "name": "Pillow",
+    "imageUrl": "https://m.media-amazon.com/images/I/51P+okcVHYL.jpg"
+  },
+  {
+    "name": "Dice",
+    "imageUrl": "https://m.media-amazon.com/images/I/61pDmDef3-L.jpg"
+  },
+  {
+    "name": "Guitar",
+    "imageUrl": "https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/f/g/fgc_ta_bs_3.jpg"
+  },
+  {
+    "name": "Harmonica",
+    "imageUrl": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_17/174729/9632830_800.jpg"
+  },
+  {
+    "name": "Shovel",
+    "imageUrl": "https://m.media-amazon.com/images/I/518u61BL8cL._AC_UF1000,1000_QL80_DpWeblab_.jpg"
+  },
+  {
+    "name": "Chainsaw",
+    "imageUrl": "https://www.sam-turner.co.uk/cdn/shop/products/h110-0325_1_1.png?v=1666774864"
+  },
+  {
+    "name": "Pickaxe",
+    "imageUrl": "https://img.fruugo.com/product/8/88/1076312888_max.jpg"
+  },
+  {
+    "name": "Hoe",
+    "imageUrl": "https://i.ebayimg.com/images/g/KvAAAOSwC4xegahV/s-l400.jpg"
+  },
+  {
+    "name": "Lamp",
+    "imageUrl": "https://www.ikea.com/es/en/images/products/blidvader-table-lamp-off-white-ceramic-beige__1059592_pe849717_s5.jpg"
+  },
+  {
+    "name": "Potion",
+    "imageUrl": "https://healingoilsandherbs.com/wp-content/uploads/2017/10/round.jpg"
+  },
+  {
+    "name": "Ball",
+    "imageUrl": "https://www.fisioastur.com/wp-content/uploads/2016/05/product-soccer-ball.jpg"
+  },
+  {
+    "name": "Racket",
+    "imageUrl": "https://i5.walmartimages.com/seo/Wilson-Burn-Pink-25-in-Junior-Tennis-Racket-Ages-9-10_6f2317be-6133-4a23-8125-2ce46285260c.851da120f1cb97923c875bfb49af7f90.png"
+  },
+  {
+    "name": "Brick",
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2022/4/VX/XX/MH/43656948/supreme-clay-brick-500x500.jpg"
+  },
+  {
+    "name": "Helmet",
+    "imageUrl": "https://m.media-amazon.com/images/I/61GJz1KdO6L._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "name": "Belt",
+    "imageUrl": "https://www.montblanc.com/variants/images/34480784411826304/A/w2500.jpg"
+  },
+  {
+    "name": "Stove",
+    "imageUrl": "https://www.cadacinternational.com/media/catalog/product/cache/5d451a7c2706e3178632db9d96f08f78/2/0/203p1-10_2_cook_3_pro_-_pot_stands.webp"
+  },
+  {
+    "name": "Pan",
+    "imageUrl": "https://m.media-amazon.com/images/I/716KR8EtZJL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "name": "Mirror",
+    "imageUrl": "https://www.ikea.com/es/en/images/products/lassbyn-table-mirror-silver-colour__1061323_pe850368_s5.jpg?f=s"
+  },
+  {
+    "name": "Shirt",
+    "imageUrl": "https://additionals.polestar.com/wp-content/uploads/2021/06/Polestar_tshirt4.png"
+  },
+  {
+    "name": "Pants",
+    "imageUrl": "https://www.helikon-tex.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/s/p/sp-pgm-dc-11.jpg"
+  },
+  {
+    "name": "Goldfish",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/%E3%83%AF%E3%82%AD%E3%83%B320120701.JPG"
+  },
+  {
+    "name": "Gloves",
+    "imageUrl": "https://www.salewa.com/media/image/8e/82/3d/eca604ef-27f8-4d8a-b649-3ae9bccdbaac_salewa.jpg"
+  },
+  {
+    "name": "Rollerblades",
+    "imageUrl": "https://www.rollerblade.com/storage/Product/0T100000741_ADVANTAGE_PRO_XT_01.jpg"
+  },
+  {
+    "name": "Skateboard",
+    "imageUrl": "https://cdn1.playskateshop.com/9564-large_default/tricks-skateboards-peace-skate-patineta-completo-775.jpg"
+  },
+  {
+    "name": "Bicycle",
+    "imageUrl": "https://i5.walmartimages.com/seo/ZNH-Mountain-Electric-Bicycle-26-in-350-W-Removable-36-V-10-Ah-Battery-Black_2046b27a-66af-4b8d-b0ac-9d9b1866b034.e1885e652ab86ffbae2d4b7562885d00.jpeg"
+  },
+  {
+    "name": "Snowboard",
+    "imageUrl": "https://m.media-amazon.com/images/I/71IJSP7S8WL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "name": "Surfboard",
+    "imageUrl": "https://www.singlequiver.com/23390-large_default/board-surf-clayton-retro-fish-5-4.jpg"
+  },
+  {
+    "name": "Glasses",
+    "imageUrl": "https://lensandframe.co/cdn/shop/products/100-l_f-_4-matte-black-eyeglasses_5000x.jpg?v=1685405063"
+  },
+  {
+    "name": "Mousepad",
+    "imageUrl": "https://resource.logitech.com/content/dam/logitech/en/products/mice/mouse-pad-studio-series/gallery/logitech-mouse-pad-studio-series-corner-view-graphite.png"
+  },
+  {
+    "name": "Mouse",
+    "imageUrl": "https://s3-eu-west-1.amazonaws.com/backcslimages/newsite/product-images/1500-1500/Logitech-Optical-Mouse-Wired-White-Back-Angle.jpg"
+  },
+  {
+    "name": "Keyboard",
+    "imageUrl": "https://www.cherry.es/media/catalog/product/cache/661c0bae3bb54b88fbb1b415a9d390cb/j/k/jk-8550-2_topview_de_3.jpg"
+  },
+  {
+    "name": "Triangle",
+    "imageUrl": "https://img.fruugo.com/product/0/14/183041140_max.jpg"
+  },
+  {
+    "name": "Vase",
+    "imageUrl": "https://img.fruugo.com/product/8/52/181891528_max.jpg"
+  },
+  {
+    "name": "Kettle",
+    "imageUrl": "https://www.ikea.com/es/en/images/products/vattentat-kettle-stainless-steel-black__0713344_pe729450_s5.jpg?f=s"
+  },
+  {
+    "name": "Camera",
+    "imageUrl": "https://i1.adis.ws/i/canon/eos-r5_front_rf24-105mmf4lisusm_square_32c26ad194234d42b3cd9e582a21c99b?$prod-gallery-1by1-jpg$"
+  },
+  {
+    "name": "Chair",
+    "imageUrl": "https://www.ikea.com/es/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s"
+  },
+  {
+    "name": "Rug",
+    "imageUrl": "https://www.ikea.com/es/en/images/products/stoense-rug-low-pile-medium-grey__0624371_pe691789_s5.jpg?f=s"
+  },
+  {
+    "name": "Flute",
+    "imageUrl": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_14/142839/15052385_800.jpg"
+  },
+  {
+    "name": "Chalk",
+    "imageUrl": "https://cdn11.bigcommerce.com/s-1e5d9p00e3/images/stencil/500x659/products/7464/20181/019312__09635.1654804127.jpg?c=1"
+  },
+  {
+    "name": "Brush",
+    "imageUrl": "https://sdcdn.io/mac/es/mac_sku_M76K01_1x1_0.png?width=1080&height=1080"
+  },
+  {
+    "name": "Disk",
+    "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-862dcc4ba0364c7eb235bf66223d4048-lq"
   }
 ]
