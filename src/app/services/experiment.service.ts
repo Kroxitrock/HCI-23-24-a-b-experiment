@@ -8,7 +8,14 @@ import { ItemSize } from '../interfaces/item-size';
 })
 export class ExperimentService {
   private experimentResults: Array<ExperimentResult> = [];
-  constructor() {}
+  constructor() {
+    const stringExperimentResults = localStorage.getItem('experimentResults');
+    console.log(stringExperimentResults);
+
+    if (stringExperimentResults) {
+      this.experimentResults = JSON.parse(stringExperimentResults);
+    }
+  }
 
   public startExperiment() {
     this.experimentResults.push({ taskResults: [] });
@@ -52,9 +59,25 @@ export class ExperimentService {
     this.getLastTaskResult().errors.push(itemName);
   }
 
-  public finishTask() {
+  public finishTask(): boolean {
     this.getLastTaskResult().endTime = Date.now();
     console.log(JSON.stringify(this.getLastTaskResult()));
+
+    // TODO: Change to 10
+    const taskFinished = this.getLastExperimentResult().taskResults.length == 2;
+
+    if (taskFinished) {
+      this.saveExperimentResult();
+    }
+
+    return taskFinished;
+  }
+
+  private saveExperimentResult() {
+    localStorage.setItem(
+      'experimentResults',
+      JSON.stringify(this.experimentResults)
+    );
   }
 
   private getLastTaskResult(): TaskResult {

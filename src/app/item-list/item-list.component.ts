@@ -8,6 +8,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExperimentService } from '../services/experiment.service';
 import { ItemSize } from '../interfaces/item-size';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-list',
@@ -29,7 +30,8 @@ export class ItemListComponent {
   constructor(
     private itemService: ItemService,
     private experimentService: ExperimentService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -40,15 +42,21 @@ export class ItemListComponent {
   }
 
   itemClicked(clickedItem: Item) {
-    if (clickedItem === this.selctedItem) {
-      this.experimentService.finishTask();
-      this.resetExperiment(this.items);
-      this.snackBar.open('Success', 'Done');
+    if (clickedItem !== this.selctedItem) {
+      this.experimentService.logError(clickedItem.name);
+      this.snackBar.open('Fail', 'Done');
       return;
     }
 
-    this.experimentService.logError(clickedItem.name);
-    this.snackBar.open('Fail', 'Done');
+    const finished = this.experimentService.finishTask();
+    this.snackBar.open('Success', 'Done');
+
+    if (finished) {
+      this.router.navigate(['/thank-you']);
+      return;
+    }
+
+    this.resetExperiment(this.items);
   }
 
   private resetExperiment(items: Array<Item>) {
