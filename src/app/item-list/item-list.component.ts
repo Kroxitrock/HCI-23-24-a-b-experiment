@@ -4,11 +4,20 @@ import { ItemCardComponent } from '../item-card/item-card.component';
 import { CommonModule } from '@angular/common';
 import { ItemService } from '../services/item.service';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ExperimentService } from '../services/experiment.service';
+import { ItemSize } from '../interfaces/item-size';
 
 @Component({
   selector: 'app-item-list',
   standalone: true,
-  imports: [ItemCardComponent, CommonModule, MatGridListModule],
+  imports: [
+    ItemCardComponent,
+    CommonModule,
+    MatGridListModule,
+    MatSnackBarModule,
+  ],
   templateUrl: './item-list.component.html',
   styleUrl: './item-list.component.scss',
 })
@@ -17,14 +26,37 @@ export class ItemListComponent {
   items: Array<Item> = [];
   isBig: boolean = false;
 
-  constructor(private itemService: ItemService) {}
+  constructor(
+    private itemService: ItemService,
+    private experimentService: ExperimentService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.itemService.getItems().subscribe((jsonItems) => {
-      this.shuffle(jsonItems);
-      this.isBig = Math.random() < 0.5;
-      this.handleItems(jsonItems);
+      this.experimentService.startExperiment();
+      this.resetExperiment(jsonItems);
     });
+  }
+
+  itemClicked(clickedItem: Item) {
+    if (clickedItem === this.selctedItem) {
+      this.experimentService.finishTask();
+      this.resetExperiment(this.items);
+      this.snackBar.open('Success', 'Done');
+      return;
+    }
+
+    this.experimentService.logError(clickedItem.name);
+    this.snackBar.open('Fail', 'Done');
+  }
+
+  private resetExperiment(items: Array<Item>) {
+    this.shuffle(items);
+    this.handleSelectedItem(items);
+    const task = this.experimentService.startTask(this.selctedItem!.name);
+    this.isBig = task.itemSize === ItemSize.Big ? true : false;
+    this.handleItems(items);
   }
 
   private shuffle(items: Array<Item>): void {
@@ -37,11 +69,9 @@ export class ItemListComponent {
   private handleItems(items: Array<Item>): void {
     items.forEach((item: Item) => (item.isBig = this.isBig));
     this.items = items;
-    this.handleSelectedItem();
   }
 
-  private handleSelectedItem(): void {
-    this.selctedItem =
-      this.items[Math.floor(Math.random() * (this.items.length - 1))];
+  private handleSelectedItem(items: Array<Item>): void {
+    this.selctedItem = items[Math.floor(Math.random() * (items.length - 1))];
   }
 }

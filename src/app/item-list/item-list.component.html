@@ -1,6 +1,6 @@
 <p>Item: {{ selctedItem?.name }}</p>
 <mat-grid-list [cols]="isBig ? 3 : 5">
   <mat-grid-tile *ngFor="let item of items">
-    <app-item-card [item]="item"></app-item-card>
+    <app-item-card [item]="item" (click)="itemClicked(item)"></app-item-card>
   </mat-grid-tile>
 </mat-grid-list>
