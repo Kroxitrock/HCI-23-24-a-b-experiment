@@ -46,12 +46,18 @@ export class ItemListComponent {
   itemClicked(clickedItem: Item) {
     if (clickedItem !== this.selctedItem) {
       this.experimentService.logError(clickedItem.name);
-      this.snackBar.open('Fail', 'Done');
+      this.snackBar.open('Incorrect', '', {
+        duration: 2000,
+        panelClass: ['incorrect-snackbar'],
+      });
       return;
     }
 
     const finished = this.experimentService.finishTask();
-    this.snackBar.open('Success', 'Done');
+    this.snackBar.open('Correct', '', {
+      duration: 2000,
+      panelClass: ['correct-snackbar'],
+    });
 
     if (finished) {
       this.router.navigate(['/thank-you']);
