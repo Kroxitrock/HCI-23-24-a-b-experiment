@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ItemService } from '../services/item.service';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ExperimentService } from '../services/experiment.service';
 import { ItemSize } from '../interfaces/item-size';
 import { Router } from '@angular/router';
@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
     CommonModule,
     MatGridListModule,
     MatSnackBarModule,
+    MatProgressBarModule,
   ],
   templateUrl: './item-list.component.html',
   styleUrl: './item-list.component.scss',
@@ -26,6 +27,7 @@ export class ItemListComponent {
   selctedItem?: Item;
   items: Array<Item> = [];
   isBig: boolean = false;
+  progress = 0;
 
   constructor(
     private itemService: ItemService,
@@ -60,12 +62,13 @@ export class ItemListComponent {
   }
 
   private resetExperiment(items: Array<Item>) {
+    this.progress += 10;
+    this.scrollToTop();
     this.shuffle(items);
     this.handleSelectedItem(items);
     const task = this.experimentService.startTask(this.selctedItem!.name);
     this.isBig = task.itemSize === ItemSize.Big ? true : false;
     this.handleItems(items);
-    this.scrollToTop();
   }
 
   private scrollToTop() {

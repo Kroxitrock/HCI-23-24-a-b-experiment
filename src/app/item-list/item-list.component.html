@@ -1,4 +1,7 @@
-<p>Item: {{ selctedItem?.name }}</p>
+<div class="header">
+  <h1>Item: {{ selctedItem?.name }}</h1>
+  <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+</div>
 <mat-grid-list [cols]="isBig ? 3 : 5">
   <mat-grid-tile *ngFor="let item of items">
     <app-item-card [item]="item" (click)="itemClicked(item)"></app-item-card>
