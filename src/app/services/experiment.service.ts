@@ -9,12 +9,15 @@ import { ItemSize } from '../interfaces/item-size';
 export class ExperimentService {
   private experimentResults: Array<ExperimentResult> = [];
   constructor() {
-    const stringExperimentResults = localStorage.getItem('experimentResults');
-    console.log(stringExperimentResults);
+    const stringExperimentResults = this.getExperimentResultsJSON();
 
     if (stringExperimentResults) {
       this.experimentResults = JSON.parse(stringExperimentResults);
     }
+  }
+
+  public getExperimentResultsJSON(): string | null {
+    return localStorage.getItem('experimentResults');
   }
 
   public startExperiment() {
