@@ -65,6 +65,15 @@ export class ItemListComponent {
     const task = this.experimentService.startTask(this.selctedItem!.name);
     this.isBig = task.itemSize === ItemSize.Big ? true : false;
     this.handleItems(items);
+    this.scrollToTop();
+  }
+
+  private scrollToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   private shuffle(items: Array<Item>): void {
