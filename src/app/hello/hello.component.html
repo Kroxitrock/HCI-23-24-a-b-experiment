@@ -1,4 +1,40 @@
 <div>
-  <h1>Human-computer interaction experiment</h1>
-  <p>Hello, and thank you for participating in this</p>
+  <h1>Human-Computer Interaction experiment</h1>
+  <p>
+    Hello, and thank you for participating in this experiment. It is conducted
+    for the purposes of the "Evaluation of Interactive Systems" course which is
+    part of the Human-Computer Interaction and Design program at Universidad
+    Politécnica de Madrid.
+  </p>
+  <p>
+    The experiment that you would be taking part of consists of 10 stages. In
+    each stage you would be asked to select an item from a list of 50 items.
+    After you successfully selected the item, another one would be randomly
+    assigned to you. For half of the stages, the size of the objects will be
+    bigger and for the rest it will be smaller. The order in which the scale is
+    changed will be random.
+  </p>
+  <p>
+    After you conlcude the experiment, you will be redirected to a page on which
+    you will be able to download the results of the experiment. We would ask you
+    to send us those results. In the results there is no data about you as a
+    person, and there is no way to identify you from the data. The parameters we
+    collect are your speed and number of errors, so we would ask you to complete
+    the experiment as effectively as possible.
+  </p>
+  <p>
+    If you have any further questions you can contact the facilitator that
+    contacted you or send an email to any of the following emails:
+  </p>
+  <ul>
+    <li>andrey.strinski&#64;alumnos.upm.es</li>
+    <li>nikoleta.dal&#64;alumnos.upm.es</li>
+    <li>clemens.tummers&#64;alumnos.upm.es</li>
+    <li>jiaqi.deng&#64;alumnos.upm.es</li>
+  </ul>
+
+  <button mat-raised-button routerLink="/experiment">Start Experiment</button>
+  <button mat-button (click)="download()" *ngIf="hasResults">
+    Download old results
+  </button>
 </div>

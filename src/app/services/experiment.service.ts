@@ -16,8 +16,27 @@ export class ExperimentService {
     }
   }
 
+  public hasResults(): boolean {
+    return !!this.getExperimentResultsJSON();
+  }
+
   public getExperimentResultsJSON(): string | null {
     return localStorage.getItem('experimentResults');
+  }
+
+  public downloadExperimentResults(): boolean {
+    const result = this.getExperimentResultsJSON();
+    if (!result) {
+      return false;
+    }
+    const blob = new Blob([result], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'experiment_results.json';
+    a.click();
+    window.URL.revokeObjectURL(url);
+    return true;
   }
 
   public startExperiment() {
