@@ -1,7 +1,12 @@
 .header {
   position: fixed;
+  top: 0;
   width: 100%;
   text-align: center;
   z-index: 998;
   background-color: white;
+}
+
+mat-grid-list {
+  margin-top: 5%;
 }
