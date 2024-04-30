@@ -68,7 +68,11 @@ export class ItemListComponent {
   }
 
   private resetExperiment(items: Array<Item>) {
-    this.progress += 10;
+    this.progress =
+      ((this.experimentService.getLastExperimentResult().taskResults.length +
+        1) /
+        6.0) *
+      100;
     this.shuffle(items);
     this.handleSelectedItem(items);
     const task = this.experimentService.startTask(this.selctedItem!.name);

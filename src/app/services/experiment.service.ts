@@ -66,11 +66,11 @@ export class ExperimentService {
       }
     });
 
-    if (bigItems == 5) {
+    if (bigItems == 3) {
       return ItemSize.Small;
     }
 
-    if (smallItems == 5) {
+    if (smallItems == 3) {
       return ItemSize.Big;
     }
 
@@ -85,8 +85,7 @@ export class ExperimentService {
     this.getLastTaskResult().endTime = Date.now();
     console.log(JSON.stringify(this.getLastTaskResult()));
 
-    const taskFinished =
-      this.getLastExperimentResult().taskResults.length == 10;
+    const taskFinished = this.getLastExperimentResult().taskResults.length == 6;
 
     if (taskFinished) {
       this.saveExperimentResult();
@@ -107,7 +106,7 @@ export class ExperimentService {
     return taskResults[taskResults.length - 1];
   }
 
-  private getLastExperimentResult(): ExperimentResult {
+  public getLastExperimentResult(): ExperimentResult {
     return this.experimentResults[this.experimentResults.length - 1];
   }
 }
