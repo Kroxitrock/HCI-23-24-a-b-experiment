@@ -63,20 +63,22 @@ export class ItemListComponent {
 
   private resetExperiment(items: Array<Item>) {
     this.progress += 10;
-    this.scrollToTop();
     this.shuffle(items);
     this.handleSelectedItem(items);
     const task = this.experimentService.startTask(this.selctedItem!.name);
     this.isBig = task.itemSize === ItemSize.Big ? true : false;
     this.handleItems(items);
+    this.scrollToTop();
   }
 
   private scrollToTop() {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
+    setTimeout(() => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }, 0);
   }
 
   private shuffle(items: Array<Item>): void {

@@ -85,8 +85,8 @@ export class ExperimentService {
     this.getLastTaskResult().endTime = Date.now();
     console.log(JSON.stringify(this.getLastTaskResult()));
 
-    // TODO: Change to 10
-    const taskFinished = this.getLastExperimentResult().taskResults.length == 2;
+    const taskFinished =
+      this.getLastExperimentResult().taskResults.length == 10;
 
     if (taskFinished) {
       this.saveExperimentResult();
